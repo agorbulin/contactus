@@ -1,0 +1,5 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Goral\ContactUs\Api\Data\ContactInterface" type="Goral\ContactUs\Model\Contact"/>
+    <preference for="Goral\ContactUs\Api\Data\ContactSearchResultInterface" type="Goral\ContactUs\Model\ContactSearchResult"/>
+    <preference for="Goral\ContactUs\Api\ContactRepositoryInterface" type="Goral\ContactUs\Model\ContactRepository"/>
+</config>

@@ -1,0 +1,25 @@
+{
+  "name": "goral/contact-us",
+  "description": "Extends Magento contact us functionality",
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "magento/framework": "*",
+    "magento/module-backend": "*",
+    "magento/module-contact": "*"
+  },
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Goral\\ContactUs\\": ""
+    }
+  }
+}

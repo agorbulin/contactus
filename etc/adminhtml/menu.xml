@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Goral_ContactUs::elements"
+                title="ContactUs by Goral" module="Goral_ContactUs"
+                parent="Magento_Backend::marketing" sortOrder="100"
+                resource="Goral_ContactUs::elements" translate="title"/>
+        <add id="Goral_ContactUs::contacts"
+                title="Contacts" module="Goral_ContactUs"
+                parent="Goral_ContactUs::elements" sortOrder="10"
+                action="contactus/contact/" resource="Goral_ContactUs::contact" translate="title"/>
+    </menu>
+</config>

@@ -2,4 +2,57 @@
     <preference for="Goral\ContactUs\Api\Data\ContactInterface" type="Goral\ContactUs\Model\Contact"/>
     <preference for="Goral\ContactUs\Api\Data\ContactSearchResultInterface" type="Goral\ContactUs\Model\ContactSearchResult"/>
     <preference for="Goral\ContactUs\Api\ContactRepositoryInterface" type="Goral\ContactUs\Model\ContactRepository"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="contactus_contact_listing_data_source" xsi:type="string">Goral\ContactUs\Model\ResourceModel\Contact\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Goral\ContactUs\Model\ResourceModel\Contact\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">goral_contactus</argument>
+            <argument name="eventPrefix" xsi:type="string">goral_contactus_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">contactus_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Goral\ContactUs\Model\ResourceModel\Contact</argument>
+        </arguments>
+    </type>
+    <virtualType name="GoralContactusGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Goral\ContactUs\Model\ResourceModel\Contact\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">GoralGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="GoralGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\Model\Entity\RepositoryFactory">
+        <arguments>
+            <argument name="entities" xsi:type="array">
+                <item name="Goral\ContactUs\Api\Data\ContactInterface" xsi:type="string">Goral\ContactUs\Api\ContactRepositoryInterface</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\MetadataPool">
+        <arguments>
+            <argument name="metadata" xsi:type="array">
+                <item name="Goral\ContactUs\Api\Data\ContactInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="string">goral_contactus</item>
+                    <item name="identifierField" xsi:type="string">entity_id</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\HydratorPool">
+        <arguments>
+            <argument name="hydrators" xsi:type="array">
+                <item name="Goral\ContactUs\Api\Data\ContactInterface" xsi:type="string">Magento\Framework\EntityManager\AbstractModelHydrator</item>
+            </argument>
+        </arguments>
+    </type>
 </config>

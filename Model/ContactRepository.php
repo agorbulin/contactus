@@ -78,7 +78,7 @@ class ContactRepository implements ContactRepositoryInterface
 
         try {
             /** @var \Goral\ContactUs\Model\Contact $contact */
-            $contact->save($contact);
+            $contact->save();
         } catch (\Exception $e) {
             throw new \Magento\Framework\Exception\CouldNotSaveException(__($e->getMessage()));
         }
@@ -96,7 +96,7 @@ class ContactRepository implements ContactRepositoryInterface
     {
         try {
             /** @var \Goral\ContactUs\Model\Contact $contact */
-            $contact->delete($contact);
+            $contact->delete();
         } catch (\Exception $e) {
             throw new \Magento\Framework\Exception\CouldNotDeleteException(__($e->getMessage()));
         }

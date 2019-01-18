@@ -6,6 +6,11 @@
                 <resource id="Magento_Backend::marketing">
                     <resource id="Goral_ContactUs::manage" title="Goral ContactUs" translate="title" sortOrder="20"/>
                 </resource>
+                <resource id="Magento_Backend::content">
+                    <resource id="Goral_ContactUs::elements" title="Goral ContactUs" translate="title" sortOrder="10">
+                        <resource id="Goral_ContactUs::contact" title="Contact" translate="title" sortOrder="10"/>
+                    </resource>
+                </resource>
             </resource>
         </resources>
     </acl>

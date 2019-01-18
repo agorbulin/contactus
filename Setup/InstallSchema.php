@@ -96,6 +96,25 @@ class InstallSchema implements InstallSchemaInterface
                                ],
                                'Update Time'
                            )
+                           ->addColumn(
+                               'store_id',
+                               \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
+                               null,
+                               ['unsigned' => true, 'nullable' => false],
+                               'Store ID'
+                           )
+                           ->addForeignKey(
+                               $installer->getFkName(
+                                   'goral_contactus',
+                                   'store_id',
+                                   'store',
+                                   'store_id'
+                               ),
+                               'store_id',
+                               $installer->getTable('store'),
+                               'store_id',
+                               \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
+                           )
                            ->setComment('Contact Us Table');
         $installer->getConnection()->createTable($table);
 

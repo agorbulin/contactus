@@ -7,11 +7,6 @@ use Magento\Store\Ui\Component\Listing\Column\Store\Options as StoreOptions;
 class Options extends StoreOptions
 {
     /**
-     * All Store Views value
-     */
-    const ADMIN_STORE = '0';
-
-    /**
      * Get options
      *
      * @return array
@@ -22,11 +17,7 @@ class Options extends StoreOptions
             return $this->options;
         }
 
-        $this->currentOptions['Admin Store']['label'] = __('Admin Store');
-        $this->currentOptions['Admin Store']['value'] = self::ADMIN_STORE;
-
         $this->generateCurrentOptions();
-
         $this->options = array_values($this->currentOptions);
 
         return $this->options;

@@ -35,9 +35,7 @@ class Index extends AbstractAction
      */
     public function execute()
     {
-        /**
-         * @var Page $resultPage
-         */
+        /** @var Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Goral_ContactUs::contact');
         $resultPage->getConfig()->getTitle()->prepend(__('ContactUs Contacts'));

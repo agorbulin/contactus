@@ -67,9 +67,7 @@ class MassDelete extends AbstractAction
         } catch (\Exception $e) {
             $this->messageManager->addErrorMessage(__('Something went wrong while deleting contact.'));
         }
-        /**
-         * @var Redirect $resultRedirect
-         */
+        /** @var Redirect $resultRedirect */
         $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
 
         return $resultRedirect->setPath('*/*/');

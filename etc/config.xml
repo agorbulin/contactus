@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <contactus>
+            <general>
+                <enabled>1</enabled>
+                <template>contactus_general_template</template>
+            </general>
+        </contactus>
+    </default>
+</config>

@@ -76,14 +76,6 @@ class Save extends AbstractAction
                 $this->contactRepository->save($model);
                 $this->messageManager->addSuccessMessage(__('You saved the contact.'));
                 $this->dataPersistor->clear('goral_contactus');
-                if ($this->getRequest()->getParam('back')) {
-                    return $resultRedirect->setPath(
-                        '*/*/edit',
-                        ['entity_id' => $model->getId(), '_current' => true]
-                    );
-                }
-
-                return $resultRedirect->setPath('*/*/');
             } catch (LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\Exception $e) {
@@ -93,7 +85,7 @@ class Save extends AbstractAction
 
             return $resultRedirect->setPath(
                 '*/*/edit',
-                ['entity_id' => $this->getRequest()->getParam('entity_id')]
+                ['entity_id' => $id]
             );
         }
 

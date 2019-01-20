@@ -265,4 +265,20 @@ class Contact extends AbstractExtensibleModel implements ContactInterface
         return $this->_setExtensionAttributes($extensionAttributes);
     }
 
+    /**
+     * @param array|string    $key
+     * @param null|string|int $value
+     *
+     * @return $this|\Magento\Framework\Model\AbstractExtensibleModel
+     */
+    public function setData($key, $value = null)
+    {
+        parent::setData($key, $value);
+        if (is_array($key) && !empty($key['store_id']) && is_array($key['store_id'])) {
+            $this->setStoreId(reset($key['store_id']));
+        }
+
+        return $this;
+    }
+
 }

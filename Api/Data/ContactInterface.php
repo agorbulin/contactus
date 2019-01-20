@@ -23,6 +23,7 @@ interface ContactInterface
     const STATUS     = 'status';
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
+    const STORE_ID = 'store_id';
     /**#@-*/
 
     /**
@@ -168,5 +169,21 @@ interface ContactInterface
      * @return $this
      */
     public function setUpdatedAt($updatedAt);
+
+    /**
+     * Contact store ID
+     *
+     * @return int
+     */
+    public function getStoreId();
+
+    /**
+     * Set contact store ID
+     *
+     * @param int $storeId
+     *
+     * @return $this
+     */
+    public function setStoreId($storeId);
 
 }

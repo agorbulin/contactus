@@ -222,6 +222,28 @@ class Contact extends AbstractExtensibleModel implements ContactInterface
     }
 
     /**
+     * Contact store ID
+     *
+     * @return int
+     */
+    public function getStoreId()
+    {
+        return $this->getData(self::STORE_ID);
+    }
+
+    /**
+     * Set contact store ID
+     *
+     * @param int $storeId
+     *
+     * @return $this
+     */
+    public function setStoreId($storeId)
+    {
+        return $this->setData(self::STORE_ID, $storeId);
+    }
+
+    /**
      * Retrieve existing extension attributes object or create a new one
      *
      * @return ContactExtensionInterface|\Magento\Framework\Api\ExtensionAttributesInterface|null

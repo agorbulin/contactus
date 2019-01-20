@@ -24,3 +24,11 @@ Make possibility manage and reply on consumers' requests.
    ```
    php bin/magento setup:static-content:deploy
    ```
+6. Module has Admin settings:
+ - STORES->Settings->Configuration->GORAL->ContactUs:
+    - enable\disable saving comments from contact us form to DB
+    - select email template
+
+ - MARKETING->ContactUs by Goral->Contacts:
+    - to send email, save contact with answer before
+    - status will be changed to 'Processed' automatically after sending email

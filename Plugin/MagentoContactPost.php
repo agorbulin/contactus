@@ -9,6 +9,7 @@ use Magento\Store\Model\StoreManagerInterface;
 use Psr\Log\LoggerInterface;
 use Magento\Contact\Controller\Index\Post;
 use Magento\Framework\Controller\Result\Redirect;
+use Goral\ContactUs\Helper\Data;
 
 /**
  * Class MagentoContactPost
@@ -33,6 +34,11 @@ class MagentoContactPost
     private $storeManager;
 
     /**
+     * @var Data
+     */
+    private $helper;
+
+    /**
      * @var LoggerInterface
      */
     protected $logger;
@@ -43,18 +49,21 @@ class MagentoContactPost
      * @param ContactRepositoryInterface $contactRepository
      * @param ContactInterfaceFactory    $contactFactory
      * @param StoreManagerInterface      $storeManager
+     * @param Data                       $helper
      * @param LoggerInterface            $logger
      */
     public function __construct(
         ContactRepositoryInterface $contactRepository,
         ContactInterfaceFactory $contactFactory,
         StoreManagerInterface $storeManager,
+        Data $helper,
         LoggerInterface $logger
 
     ) {
         $this->contactRepository = $contactRepository;
         $this->contactFactory = $contactFactory;
         $this->storeManager = $storeManager;
+        $this->helper = $helper;
         $this->logger = $logger;
     }
 
@@ -66,6 +75,9 @@ class MagentoContactPost
      */
     public function afterExecute(Post $subject, $result)
     {
+        if (!$this->helper->isEnabled()) {
+            return $result;
+        }
         $post = $subject->getRequest()->getParams();
         try {
             $this->createContact($post);

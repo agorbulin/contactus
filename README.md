@@ -1,6 +1,6 @@
 # Contact Us module by Goral
 
-The extension to extend Magento® 2 contact us form functionality.
+The extension extends Magento® 2 contact us form functionality.
 Make possibility manage and reply on consumers' requests.
 
 # Install from GitHub

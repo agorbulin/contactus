@@ -31,10 +31,10 @@ class Edit extends AbstractAction
     private $resultPageFactory;
 
     /**
-     * @param Context                    $context
+     * @param Context $context
      * @param ContactRepositoryInterface $contactRepository
-     * @param ContactFactory             $contactFactory
-     * @param PageFactory                $resultPageFactory
+     * @param ContactFactory $contactFactory
+     * @param PageFactory $resultPageFactory
      */
     public function __construct(
         Context $context,

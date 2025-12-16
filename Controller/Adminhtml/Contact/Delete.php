@@ -18,7 +18,7 @@ class Delete extends AbstractAction
 
     /**
      * @param ContactRepository $contactRepository
-     * @param Context           $context
+     * @param Context $context
      */
     public function __construct(
         Context $context,

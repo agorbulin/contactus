@@ -25,7 +25,7 @@ abstract class AbstractButton implements ButtonProviderInterface
     /**
      * DeleteButton constructor.
      *
-     * @param \Magento\Backend\Block\Widget\Context           $context
+     * @param \Magento\Backend\Block\Widget\Context $context
      * @param \Goral\ContactUs\Api\ContactRepositoryInterface $contactRepository
      */
     public function __construct(

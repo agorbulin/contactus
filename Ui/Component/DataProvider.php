@@ -14,15 +14,15 @@ use Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider as Mage
 class DataProvider extends MagentoDataProvider
 {
     /**
-     * @param string                $name
-     * @param string                $primaryFieldName
-     * @param string                $requestFieldName
-     * @param Reporting             $reporting
+     * @param string $name
+     * @param string $primaryFieldName
+     * @param string $requestFieldName
+     * @param Reporting $reporting
      * @param SearchCriteriaBuilder $searchCriteriaBuilder
-     * @param RequestInterface      $request
-     * @param FilterBuilder         $filterBuilder
-     * @param array                 $meta
-     * @param array                 $data
+     * @param RequestInterface $request
+     * @param FilterBuilder $filterBuilder
+     * @param array $meta
+     * @param array $data
      */
     public function __construct(
         $name,

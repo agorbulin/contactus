@@ -27,10 +27,10 @@ class Send extends AbstractAction
     /**
      * Send constructor.
      *
-     * @param Context           $context
+     * @param Context $context
      * @param ContactRepository $contactRepository
-     * @param ContactValidator  $contactValidator
-     * @param Mail              $mail
+     * @param ContactValidator $contactValidator
+     * @param Mail $mail
      */
     public function __construct(
         Context $context,

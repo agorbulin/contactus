@@ -16,9 +16,9 @@ class SendEmailButton extends AbstractButton
         $contactId = $this->getContactId();
         if ($contactId !== null) {
             $data = [
-                'label'      => __('Send Email'),
-                'class'      => 'send',
-                'on_click'   => sprintf(
+                'label' => __('Send Email'),
+                'class' => 'send',
+                'on_click' => sprintf(
                     "deleteConfirm('%s', '%s')",
                     __('Are you sure you want to send answer?'),
                     $this->getUrl('*/*/send', ['entity_id' => $contactId])

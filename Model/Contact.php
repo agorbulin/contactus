@@ -266,7 +266,7 @@ class Contact extends AbstractExtensibleModel implements ContactInterface
     }
 
     /**
-     * @param array|string    $key
+     * @param array|string $key
      * @param null|string|int $value
      *
      * @return $this|\Magento\Framework\Model\AbstractExtensibleModel

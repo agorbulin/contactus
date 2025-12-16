@@ -46,11 +46,11 @@ class Mail
     /**
      * Mail constructor.
      *
-     * @param ConfigInterface       $contactsConfig
-     * @param TransportBuilder      $transportBuilder
-     * @param StateInterface        $inlineTranslation
+     * @param ConfigInterface $contactsConfig
+     * @param TransportBuilder $transportBuilder
+     * @param StateInterface $inlineTranslation
      * @param StoreManagerInterface $storeManager
-     * @param Data                  $helper
+     * @param Data $helper
      */
     public function __construct(
         ConfigInterface $contactsConfig,
@@ -81,7 +81,7 @@ class Mail
                 ->setTemplateIdentifier($this->helper->getTemplate())
                 ->setTemplateOptions(
                     [
-                        'area'  => Area::AREA_FRONTEND,
+                        'area' => Area::AREA_FRONTEND,
                         'store' => $contact->getStoreId()
                     ]
                 )

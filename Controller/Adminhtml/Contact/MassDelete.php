@@ -30,8 +30,8 @@ class MassDelete extends AbstractAction
     private $contactRepository;
 
     /**
-     * @param Context           $context
-     * @param Filter            $filter
+     * @param Context $context
+     * @param Filter $filter
      * @param CollectionFactory $collectionFactory
      * @param ContactRepository $contactRepository
      */

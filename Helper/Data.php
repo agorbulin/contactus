@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Helper;
 
@@ -16,7 +16,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * @param string $scope
-     * @param null   $scopeCode
+     * @param null $scopeCode
      *
      * @return mixed
      */
@@ -27,7 +27,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * @param string $scope
-     * @param null   $scopeCode
+     * @param null $scopeCode
      *
      * @return mixed
      */

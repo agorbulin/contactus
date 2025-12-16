@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Model;
 
@@ -34,10 +34,10 @@ class DataProvider extends AbstractDataProvider
      * @param                        $name
      * @param                        $primaryFieldName
      * @param                        $requestFieldName
-     * @param CollectionFactory      $collectionFactory
+     * @param CollectionFactory $collectionFactory
      * @param DataPersistorInterface $dataPersistor
-     * @param array                  $meta
-     * @param array                  $data
+     * @param array $meta
+     * @param array $data
      */
     public function __construct(
         $name,

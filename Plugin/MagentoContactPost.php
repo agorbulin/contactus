@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Plugin;
 
@@ -47,10 +47,10 @@ class MagentoContactPost
      * MagentoContactPost constructor.
      *
      * @param ContactRepositoryInterface $contactRepository
-     * @param ContactInterfaceFactory    $contactFactory
-     * @param StoreManagerInterface      $storeManager
-     * @param Data                       $helper
-     * @param LoggerInterface            $logger
+     * @param ContactInterfaceFactory $contactFactory
+     * @param StoreManagerInterface $storeManager
+     * @param Data $helper
+     * @param LoggerInterface $logger
      */
     public function __construct(
         ContactRepositoryInterface $contactRepository,
@@ -68,7 +68,7 @@ class MagentoContactPost
     }
 
     /**
-     * @param Post     $subject
+     * @param Post $subject
      * @param Redirect $result
      *
      * @return Redirect

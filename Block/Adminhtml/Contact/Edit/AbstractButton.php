@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Block\Adminhtml\Contact\Edit;
 
@@ -25,7 +25,7 @@ abstract class AbstractButton implements ButtonProviderInterface
     /**
      * DeleteButton constructor.
      *
-     * @param \Magento\Backend\Block\Widget\Context           $context
+     * @param \Magento\Backend\Block\Widget\Context $context
      * @param \Goral\ContactUs\Api\ContactRepositoryInterface $contactRepository
      */
     public function __construct(

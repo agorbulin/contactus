@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Controller\Adminhtml\Contact;
 
@@ -33,10 +33,10 @@ class Save extends AbstractAction
     /**
      * Save constructor.
      *
-     * @param Context                $context
+     * @param Context $context
      * @param DataPersistorInterface $dataPersistor
-     * @param ContactRepository      $contactRepository
-     * @param ContactFactory         $contactFactory
+     * @param ContactRepository $contactRepository
+     * @param ContactFactory $contactFactory
      */
     public function __construct(
         Context $context,

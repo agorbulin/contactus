@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Model\ResourceModel\Contact\Grid;
 
@@ -25,16 +25,16 @@ class Collection extends ContactCollection implements SearchResultInterface
 
     /**
      * @param EntityFactoryInterface $entityFactory
-     * @param LoggerInterface        $logger
+     * @param LoggerInterface $logger
      * @param FetchStrategyInterface $fetchStrategy
-     * @param ManagerInterface       $eventManager
-     * @param mixed|null             $mainTable
-     * @param AbstractDb             $eventPrefix
-     * @param mixed                  $eventObject
-     * @param mixed                  $resourceModel
-     * @param string                 $model
-     * @param null                   $connection
-     * @param AbstractDb|null        $resource
+     * @param ManagerInterface $eventManager
+     * @param mixed|null $mainTable
+     * @param AbstractDb $eventPrefix
+     * @param mixed $eventObject
+     * @param mixed $resourceModel
+     * @param string $model
+     * @param null $connection
+     * @param AbstractDb|null $resource
      * @SuppressWarnings(PHPMD.ExcessiveParameterList)
      */
     public function __construct(

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Model;
 
@@ -36,9 +36,9 @@ class ContactRepository implements ContactRepositoryInterface
     /**
      * ContactRepository constructor.
      *
-     * @param \Goral\ContactUs\Model\ContactFactory                          $contactFactory
+     * @param \Goral\ContactUs\Model\ContactFactory $contactFactory
      * @param \Goral\ContactUs\Model\ResourceModel\Contact\CollectionFactory $contactCollectionFactory
-     * @param \Goral\ContactUs\Api\Data\ContactSearchResultInterfaceFactory  $contactSearchResultInterfaceFactory
+     * @param \Goral\ContactUs\Api\Data\ContactSearchResultInterfaceFactory $contactSearchResultInterfaceFactory
      */
     public function __construct(
         ContactFactory $contactFactory,
@@ -142,7 +142,7 @@ class ContactRepository implements ContactRepositoryInterface
     }
 
     /**
-     * @param \Magento\Framework\Api\SearchCriteriaInterface          $searchCriteria
+     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @param \Goral\ContactUs\Model\ResourceModel\Contact\Collection $collection
      */
     private function addFiltersToCollection(SearchCriteriaInterface $searchCriteria, Collection $collection)
@@ -158,7 +158,7 @@ class ContactRepository implements ContactRepositoryInterface
     }
 
     /**
-     * @param \Magento\Framework\Api\SearchCriteriaInterface          $searchCriteria
+     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @param \Goral\ContactUs\Model\ResourceModel\Contact\Collection $collection
      */
     private function addSortOrdersToCollection(SearchCriteriaInterface $searchCriteria, Collection $collection)
@@ -170,7 +170,7 @@ class ContactRepository implements ContactRepositoryInterface
     }
 
     /**
-     * @param \Magento\Framework\Api\SearchCriteriaInterface          $searchCriteria
+     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @param \Goral\ContactUs\Model\ResourceModel\Contact\Collection $collection
      */
     private function addPagingToCollection(SearchCriteriaInterface $searchCriteria, Collection $collection)
@@ -180,7 +180,7 @@ class ContactRepository implements ContactRepositoryInterface
     }
 
     /**
-     * @param \Magento\Framework\Api\SearchCriteriaInterface          $searchCriteria
+     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @param \Goral\ContactUs\Model\ResourceModel\Contact\Collection $collection
      *
      * @return mixed

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Setup;
 
@@ -14,7 +14,7 @@ use Magento\Framework\Setup\SchemaSetupInterface;
 class InstallSchema implements InstallSchemaInterface
 {
     /**
-     * @param \Magento\Framework\Setup\SchemaSetupInterface   $setup
+     * @param \Magento\Framework\Setup\SchemaSetupInterface $setup
      * @param \Magento\Framework\Setup\ModuleContextInterface $context
      *
      * @throws \Zend_Db_Exception
@@ -92,7 +92,7 @@ class InstallSchema implements InstallSchemaInterface
                                null,
                                [
                                    'nullable' => false,
-                                   'default'  => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE
+                                   'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE
                                ],
                                'Update Time'
                            )

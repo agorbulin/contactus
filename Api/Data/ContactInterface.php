@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Api\Data;
 
@@ -23,7 +23,7 @@ interface ContactInterface
     const STATUS     = 'status';
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-    const STORE_ID = 'store_id';
+    const STORE_ID   = 'store_id';
     /**#@-*/
 
     /**

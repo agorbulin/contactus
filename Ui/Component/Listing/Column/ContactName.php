@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Ui\Component\Listing\Column;
 
@@ -25,12 +25,12 @@ class ContactName extends Column
     private $editUrl;
 
     /**
-     * @param ContextInterface   $context
+     * @param ContextInterface $context
      * @param UiComponentFactory $uiComponentFactory
-     * @param UrlInterface       $urlBuilder
-     * @param array              $components
-     * @param array              $data
-     * @param string             $editUrl
+     * @param UrlInterface $urlBuilder
+     * @param array $components
+     * @param array $data
+     * @param string $editUrl
      */
     public function __construct(
         ContextInterface $context,

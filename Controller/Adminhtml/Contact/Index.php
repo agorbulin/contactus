@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Controller\Adminhtml\Contact;
 
@@ -17,7 +17,7 @@ class Index extends AbstractAction
     private $resultPageFactory;
 
     /**
-     * @param Context     $context
+     * @param Context $context
      * @param PageFactory $resultPageFactory
      */
     public function __construct(

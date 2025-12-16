@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Controller\Adminhtml\Contact;
 
@@ -18,7 +18,7 @@ class Delete extends AbstractAction
 
     /**
      * @param ContactRepository $contactRepository
-     * @param Context           $context
+     * @param Context $context
      */
     public function __construct(
         Context $context,

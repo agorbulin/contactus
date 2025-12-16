@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goral\ContactUs\Model;
 
@@ -266,7 +266,7 @@ class Contact extends AbstractExtensibleModel implements ContactInterface
     }
 
     /**
-     * @param array|string    $key
+     * @param array|string $key
      * @param null|string|int $value
      *
      * @return $this|\Magento\Framework\Model\AbstractExtensibleModel
